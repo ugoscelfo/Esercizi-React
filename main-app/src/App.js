@@ -1,7 +1,7 @@
 import React from 'react';
 import Hello from './Hello';
 
- class App extends Component {
+ class App extends React.Component {
   render() {
     return (
       <div>
