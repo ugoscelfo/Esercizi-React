@@ -7,7 +7,7 @@ import Welcome from './Welcome';
     return (
       <div>
         <Hello />
-        <Welcome />
+        <Welcome name="ugo" age={30} />
       </div>
     )
   }
