@@ -7,10 +7,11 @@ import Welcome from './Welcome';
     return (
       <div>
         <Hello />
-        <Welcome name="ugo" />
+        <Welcome />
       </div>
     )
   }
+  
 }
 
 export default App;
