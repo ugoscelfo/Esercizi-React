@@ -8,7 +8,7 @@ class Welcome extends React.Component {
     return (
       <div>
         <p>Welcome, <strong>{name}!</strong></p>
-        <Age age={30}/>
+        <Age age={30}/> 
       </div>
     )
   }
