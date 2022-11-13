@@ -1,7 +1,6 @@
 import React from 'react';
-import CounterDisplay from './CounterDisplay';
 
-class Counter extends React.Component {
+class ClickCounter extends React.Component {
   state = {
       count: this.props.initialValue,
     };
@@ -14,13 +13,14 @@ class Counter extends React.Component {
     })
   };
 
-  render() {
+  render () {
     return (
       <div>
-        <CounterDisplay count={this.state.count} /> 
+        <h1>Count: {this.state.count}</h1>
+        <button onClick={this.counterIncrement}>Increment</button>
       </div>
     )
   }
 };
 
-export default Counter; 
+export default ClickCounter;

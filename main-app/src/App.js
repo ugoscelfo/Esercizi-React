@@ -9,7 +9,7 @@ import Counter from './Counter';
       <div>
         <Hello />
         <Welcome name="John" />
-        <Counter initialValue={0} incrementBy={1} timeout={1000}/>
+        <Counter initialValue={0} incrementBy={1}/>
       </div>
     )
   }
