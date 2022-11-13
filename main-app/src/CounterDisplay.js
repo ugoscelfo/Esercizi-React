@@ -1,9 +1,12 @@
 import React from 'react';
+import ClickCounter from './ClickCounter';
 
 class CounterDisplay extends React.Component {
   render () {
     return (
-      <h1>Count: {this.props.count}</h1>
+      <div>
+        <ClickCounter initialValue={0} incrementBy={1}/>
+      </div>
     )
   }
 };
