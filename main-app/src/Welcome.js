@@ -5,12 +5,12 @@ class Welcome extends React.Component {
   render() {
     return (
       <div>
-        {this.props.name === "John" && (
+        {/* {this.props.name === "John" && ( */}
           <div>
-            <p>Welcome, <strong>{this.props.name}!</strong></p>
+            <p>Welcome, <strong>{this.props.name}</strong></p>
             <Age age={18} />
           </div>
-        )}
+        {/* )} */}
       </div>
     )
   } 
