@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Age from './Age';
 
 class Welcome extends React.Component {
   render() {
     return (
       <div>
-        <p>Welcome, {this.props.name}</p>
-        <p>Your age is {this.props.age}</p>
+        {this.props.name === "John" && <p>Welcome, <strong>{this.props.name}!</strong></p>}
+        <Age age={30}/> 
       </div>
     )
   }
