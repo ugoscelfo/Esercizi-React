@@ -9,7 +9,7 @@ import ClickTracker from './ClickTracker';
     return (
       <div>
         <Hello />
-        <Welcome name="John" />
+        <Welcome name={<strong>Ugo</strong>} age={30} />
         <Counter initialValue={0} incrementBy={1}/>
         <br />
         <ClickTracker />
