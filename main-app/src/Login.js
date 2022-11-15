@@ -30,9 +30,20 @@ class Login extends React.Component{
     })
 }
 
+handleResetState = () => {
+  this.setState({
+    username: "",
+    password: "",
+    remember: false
+  })
+}
+
   render(){
     return(
       <div>
+        <div>
+          <button onClick={this.handleResetState}>Reset</button>
+        </div>
         <label>Surname: 
           <input name="username" value={this.state.username} onChange={this.handleInputChange}/>
         </label>
