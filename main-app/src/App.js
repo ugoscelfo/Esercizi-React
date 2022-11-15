@@ -1,6 +1,7 @@
 import React from 'react';
 import InteractiveWelcome from './InteractiveWelcome';
 import Login from './Login';
+import UncontrolledLogin from './UncontrolledLogin';
 
  class App extends React.Component {
   render() {
@@ -8,6 +9,7 @@ import Login from './Login';
       <div>
         <InteractiveWelcome name={this.props.name}/>
         <Login />
+        <UncontrolledLogin />
       </div>
     )
   }
