@@ -2,6 +2,7 @@ import React from 'react';
 
 class TodoList extends React.Component {
   state = {
+    input: "",
     items: [
       "item 1", "item 2", "item 3", "item 4"]
   };
@@ -16,7 +17,8 @@ class TodoList extends React.Component {
   handleButtonAdd = (event) => {
     event.preventDefault()
     this.setState({
-        items:[...this.state.items, this.state.input]
+        items:[...this.state.items, this.state.input],
+        input: "",
     })
   };
 
@@ -25,7 +27,7 @@ class TodoList extends React.Component {
       <div>
         <ul>
           {this.state.items.map((item, index) => <li key={item + index}>{item}</li>)}
-          <input onChange={this.handleInputAdd}></input>
+          <input value={this.state.input} onChange={this.handleInputAdd}></input>
           <button onClick={this.handleButtonAdd}>Add</button>
         </ul>
       </div>
