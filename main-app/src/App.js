@@ -1,15 +1,11 @@
 import React from 'react';
-import InteractiveWelcome from './InteractiveWelcome';
-import Login from './Login';
-import UncontrolledLogin from './UncontrolledLogin';
+import TodoList from './TodoList';
 
  class App extends React.Component {
   render() {
     return (
       <div>
-        <InteractiveWelcome name={this.props.name}/>
-        <Login />
-        <UncontrolledLogin />
+        <TodoList />
       </div>
     )
   }
