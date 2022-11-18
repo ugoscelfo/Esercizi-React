@@ -4,7 +4,7 @@ import Age from './Age';
 class Welcome extends React.Component {
   render() {
     return (
-      <div>
+      <div className='welcome'>
         {/* {this.props.name === "John" && ( */}
           <div>
             <p>Welcome, <strong>{this.props.name}</strong></p>
