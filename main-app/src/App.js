@@ -1,6 +1,6 @@
 import React from 'react';
 import Welcome from './Welcome';
-import TodoList from './TodoList';
+import Login from './Login';
 
  class App extends React.Component {
   state = {
@@ -11,7 +11,7 @@ import TodoList from './TodoList';
     return (
       <div>
         <Welcome name={this.state.username}/>
-        <TodoList />
+        <Login />
       </div>
     )
   }

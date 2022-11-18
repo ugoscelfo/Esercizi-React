@@ -39,6 +39,10 @@ handleResetState = () => {
 }
 
   render(){
+    const LoginBtnStyle = {
+      backgroundColor: this.state.password.length < 8 ? "red " : "green"
+    }
+
     return(
       <div>
         <div>
@@ -51,7 +55,7 @@ handleResetState = () => {
           <input name="password" type="password" value={this.state.password} onChange={this.handleInputChange} />
         </label>
         <input name="remember" type="checkbox" checked={this.state.remember} onChange={this.handleInputChange} />
-        <button name="login" type="button" disabled={this.state.buttonDisabled} onChange={this.handleInputChange} onClick={this.onLogin}>Login</button>
+        <button name="login" type="button" disabled={this.state.buttonDisabled} onChange={this.handleInputChange} onClick={this.onLogin} style={LoginBtnStyle}>Login</button>
       </div>
     )
   }
