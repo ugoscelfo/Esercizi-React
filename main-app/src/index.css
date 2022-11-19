@@ -3,3 +3,9 @@
   border: 2px solid blue;
   padding: 20px;
 }
+
+.container{
+  background-color: #fff;
+  border: 2px solid red;
+  padding: 20px;
+}

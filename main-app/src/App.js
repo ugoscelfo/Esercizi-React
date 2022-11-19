@@ -1,6 +1,7 @@
 import React from 'react';
 import Welcome from './Welcome';
 import Login from './Login';
+import Container from './Container';
 
  class App extends React.Component {
   state = {
@@ -9,10 +10,10 @@ import Login from './Login';
 
   render() {
     return (
-      <div>
+      <Container>
         <Welcome name={this.state.username}/>
         <Login />
-      </div>
+      </Container>
     )
   }
   
