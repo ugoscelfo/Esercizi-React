@@ -10,7 +10,7 @@ import Container from './Container';
 
   render() {
     return (
-      <Container>
+      <Container title="My app">
         <Welcome name={this.state.username}/>
         <Login />
       </Container>
