@@ -1,35 +1,32 @@
 import React from 'react';
-import Welcome from './Welcome';
 import Container from './Container';
-import TodoList from './TodoList';
+import DisplayLanguage from './DisplayLanguage';
+import { LanguageContext } from './LanguageContext';
 
  class App extends React.Component {
   state = {
-    username: "ugo",
+    language: "en"
+  }
+
+  handlanguageChange = (event) => {
+    this.setState({
+      language: event.target.value
+    })
   }
 
   render() {
     return (
-      <Container title="My app">
-        <Welcome name={this.state.username}/>
-
-        <TodoList render={(items, remove) => {
-          return(
-            <ul>
-              {items.map((item, index) => 
-                <li key={item + index}>{item}
-                  <button type='button' onClick={remove}>Remove</button>
-                </li>
-              )}
-            </ul>
-          ) 
-          }}
-
-        >
-    
-        </TodoList>
-
-      </Container>
+      <div>
+        <select value={this.state.language} onChange={this.handlanguageChange}>
+          <option value="en">English</option>
+          <option value="it">Italiano</option>
+        </select>
+        <LanguageContext.Provider value={this.state.language}>
+          <Container title="My app">
+            <DisplayLanguage />
+          </Container>
+        </LanguageContext.Provider>
+      </div>
     )
   }
   
