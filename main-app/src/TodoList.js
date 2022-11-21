@@ -40,16 +40,13 @@ class TodoList extends React.Component {
   render() {
     return (
       <div>
-        <ul>
-          {this.state.items.map((item, index) => 
-          <li key={item + index}>{item}
-            <button type='button' onClick={this.remove}>Remove</button>
-          </li>
-          )}
+        
+          {this.props.render(this.state.items, this.remove)}
+
           <input value={this.state.input} onChange={this.handleInputAdd}></input>
           <button onClick={this.handleButtonAdd}>Add</button>
           <button type='reset' onClick={this.reset}>Reset</button>
-        </ul>
+       
       </div>
     );
   }
