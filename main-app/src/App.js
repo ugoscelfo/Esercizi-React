@@ -14,28 +14,15 @@ import TodoList from './TodoList';
         <Welcome name={this.state.username}/>
 
         <TodoList render={(items, remove) => {
-          // return(
-          //   <ul>
-          //     {items.map((item, index) => 
-          //       <li key={item + index}>{item}
-          //         <button type='button' onClick={remove}>Remove</button>
-          //       </li>
-          //     )}
-          //   </ul>
-          // )
-          return (
-          
-          items.map((item, index) => {
-            return(
-          <div key={index}>
-            <li>{item}</li>
-            <button onClick={remove}>Remove</button>
-          </div>
-            )
-        })
-          
-          )
-        
+          return(
+            <ul>
+              {items.map((item, index) => 
+                <li key={item + index}>{item}
+                  <button type='button' onClick={remove}>Remove</button>
+                </li>
+              )}
+            </ul>
+          ) 
           }}
 
         >
