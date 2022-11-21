@@ -26,6 +26,6 @@ class DisplayLanguage extends React.Component{
       </div>
     )
   }
-}
+};
 
 export default DisplayLanguage;
