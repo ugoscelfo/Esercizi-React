@@ -1,6 +1,6 @@
 import React from 'react';
-import { ClickCounter } from './ClickCounter';
 import Container from './Container';
+import { Login } from './Login';
 import Welcome from './Welcome';
 
 class App extends React.Component {
@@ -9,7 +9,7 @@ class App extends React.Component {
       <div>
         <Container title="My app">
           <Welcome name={"ugo"}/>
-          <ClickCounter />
+          <Login />
         </Container>
       </div>
     )
