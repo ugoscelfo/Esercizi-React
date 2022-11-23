@@ -1,20 +1,23 @@
-import React from 'react';
-import { ClickCounter } from './ClickCounter';
+import React, { useState } from 'react';
 import Container from './Container';
+import { Counter } from './Counter';
 import Welcome from './Welcome';
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Container title="My app">
-          <Welcome name={"ugo"}/>
-          <ClickCounter />
-        </Container>
-      </div>
-    )
-  }
-  
-}
 
-export default App;
+export default function App() {
+  const [showCount, setShowCount] = useState(true)
+
+  function toggleCount(){
+    setShowCount(s => !s)
+  }
+
+  return (
+    <div>
+      <Container title="My app">
+        <Welcome name={"ugo"}/>
+        {showCount && <Counter />}
+        <button onClick={toggleCount}>Toggle count</button>
+      </Container>
+    </div>
+  )
+}
