@@ -9,7 +9,7 @@ class App extends React.Component {
       <div>
         <Container title="My app">
           <Welcome name={"ugo"}/>
-          <ClickCounter />
+          <ClickCounter initialValue={0}/>
         </Container>
       </div>
     )

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export function ClickCounter({ initialValue = 0 }) {
+export function ClickCounter({ initialValue }) {
   const [count, setCount] = useState(initialValue);
 
   function onCounterChange() {
