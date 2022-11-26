@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from './Container';
-import { GithubUser } from './GithubUser';
+import { GithubUserList } from './GithubUserList';
 import Welcome from './Welcome';
 
 
@@ -10,7 +10,7 @@ export default function App() {
     <div>
       <Container title="My app">
         <Welcome name={"ugo"}/>
-        <GithubUser username="ugoscelfo"/>
+        <GithubUserList />
       </Container>
     </div>
   )
