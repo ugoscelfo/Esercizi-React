@@ -1,8 +1,7 @@
 import React from 'react';
+import { ClickCounter } from './ClickCounter';
 import Container from './Container';
-import { GithubUserList } from './GithubUserList';
 import Welcome from './Welcome';
-
 
 export default function App() {
 
@@ -10,7 +9,7 @@ export default function App() {
     <div>
       <Container title="My app">
         <Welcome name={"ugo"}/>
-        <GithubUserList />
+        <ClickCounter />
       </Container>
     </div>
   )
