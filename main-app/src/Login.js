@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 
-export function Login() {
-  // const [username, setUsername] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [remember, setRemember] = useState(false);
+
+//  Custom Hook
+function useForm() {
   const [data, setData] = useState({
     username: "",
     password: "",
@@ -21,6 +20,21 @@ export function Login() {
     })
   }
 
+  function handleInputUpdate(event) {
+    event.preventDefault();
+    console.log(data);
+  }
+
+  return{
+    data,
+    handleInputChange,
+    handleInputUpdate
+  }
+}
+
+export function Login() {
+  const {data, handleInputChange, handleInputUpdate} = useForm()
+
   return(
     <div>
       <label>Username: 
@@ -30,6 +44,7 @@ export function Login() {
         <input name="password" type="password" value={data.password} onChange={handleInputChange} />
       </label>
       <input name="remember" type="checkbox" checked={data.remember} onChange={handleInputChange} />
+      <button onClick={handleInputUpdate}>Update</button>
     </div>
   )
 }
