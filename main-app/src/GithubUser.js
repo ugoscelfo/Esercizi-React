@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
-export function GithubUser({ username }) {
+// Custom Hook
+function useGithubUser(username) {
   const [data, setData] = useState(null)
 
   useEffect(() => {
@@ -13,6 +14,15 @@ export function GithubUser({ username }) {
         setData(json)
       })
   }, [username])
+
+  return{
+    data
+  }
+}
+
+// Component
+export function GithubUser({ username }) {
+  const {data} = useGithubUser(username)
 
   return(
     <div>
