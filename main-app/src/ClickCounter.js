@@ -1,27 +1,4 @@
-import React, { useState } from 'react';
-
-function useCounter(initialValue = 0) {
-  const [count, setCount] = useState(initialValue);
-
-  function counterIncrement() {
-    setCount(count => count + 1)
-  };
-
-  function counterDecrement() {
-    setCount(count => count === initialValue ? 0 : count - 1)
-  };
-
-  function counterReset() {
-    setCount(initialValue)
-  };
-
-  return{
-    counter: count,
-    onIncrement: counterIncrement,
-    onDecrement: counterDecrement,
-    onReset: counterReset
-  }
-}
+import { useCounter } from './useCounter';
 
 export function ClickCounter({ initialValue = 0 }) {
   const {counter, onIncrement, onDecrement, onReset} = useCounter(initialValue)
