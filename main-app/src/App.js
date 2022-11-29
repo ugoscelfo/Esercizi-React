@@ -25,7 +25,7 @@ export default function App() {
         <Route path="/welcome" element={<Welcome name={"ugo"}/>} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/users" element={<GithubUserList />} >
-          <Route index element={<p>Please select a user</p>} />
+          <Route index element={<p>Add a user and select it</p>} />
           <Route path=":username" element={<ShowGithubUser />}/>
         </Route>
       </Routes>
