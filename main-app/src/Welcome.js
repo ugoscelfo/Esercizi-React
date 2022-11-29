@@ -11,6 +11,8 @@ export default function Welcome(props) {
       <p>Welcome, <strong>{props.name}</strong></p>
       <Age age={30} />
       <Link to="/counter">Go to the Counter</Link>
+      <br />
+      <Link to="users/ugoscelfo">Go to the github user</Link>
     </div>
   )
 }
