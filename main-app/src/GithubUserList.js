@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link, Outlet } from 'react-router-dom';
 import {GithubUser} from './GithubUser'
 
 export function GithubUserList(){
@@ -29,15 +30,26 @@ export function GithubUserList(){
 
   return(
     <div>
+      <h1>Users</h1>
       <ul>
+        <li>
+        <Link to="/users/ugoscelfo">User 1</Link>
+        </li>
+        <li>
+        <Link to="/users/TheBernieA">User 2</Link>
+        </li>
+      </ul>
+      {/* <ul>
         {data.users.map((username, index) => 
           <li key={index}>
-            <GithubUser username={username} />
+            <Link to="/users/1"><GithubUser username={username} /></Link>
           </li>
         )}
       </ul>
       <input value={data.input} onChange={handleInputAdd}></input>
-      <button onClick={handleButtonAdd}>Add</button>
+      <button onClick={handleButtonAdd}>Add</button> */}
+
+      <Outlet />
     </div>
   )
 }
