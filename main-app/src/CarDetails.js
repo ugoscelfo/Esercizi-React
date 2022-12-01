@@ -1,18 +1,25 @@
 import { useRef } from 'react';
 
-export function CarDetails ({ initialData = {model: 'Model', year: '2022', color: 'White'}}) {
-  const _form = useRef ();
+export function CarDetails ({ initialData }) {
+  initialData = {
+    model: 'Ford', 
+    year: '2022', 
+    color: 'Red'
+  }
+  
+  const formRef = useRef();
 
-  function handleForm (event) {
-    const name = event.target.name;
-    _form.current[name].value = event.target.value;
+  function handleInput () {
+    formRef.current.reset();
   }
 
   return (
-    <form ref={_form} onChange={handleForm}>
-      <input name="model" defaultValue={initialData.model} /> 
-      <input name="year" defaultValue={initialData.year} />   
-      <input name="color" defaultValue={initialData.color} />
-    </form>            
+    <div>
+      <form ref={formRef} onChange={handleInput}>
+        <input defaultValue={initialData.model}  /> 
+        <input defaultValue={initialData.year} />   
+        <input defaultValue={initialData.color} />
+      </form>    
+    </div>       
   )
-}
+} 
