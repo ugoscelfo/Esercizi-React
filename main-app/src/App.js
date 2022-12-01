@@ -1,8 +1,10 @@
 import React from 'react';
+import { CarDetails } from './CarDetails';
 import {Route, Routes} from 'react-router-dom';
 import {Counter} from './Counter';
 import { Link } from 'react-router-dom';
 import Container from './Container';
+
 
 import Welcome from './Welcome';
 import { GithubUser } from './GithubUser';
@@ -11,6 +13,8 @@ export default function App() {
   return (
     <div>
       <Container title="My app">
+        <Welcome name={"ugo"}/>
+        <CarDetails />
         <ul>
         <li><Link to="/welcome">Welcome</Link></li>
         <br />
