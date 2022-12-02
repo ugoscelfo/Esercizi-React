@@ -42,7 +42,7 @@ export function GithubUserList(){
       <ul>
         {data.users.map((username, index) => 
           <li key={index}>
-            <Link to="/users/:username">{username}</Link>
+            <Link to={`/users/${username}`}>{username}</Link>
           </li>
         )}  
       </ul>
